@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>MY CALCULATOR</h1>
+      <label>val1</label>
+      <input type="number" name="" id="val1" />
+      <br><br>
+      <label>val2</label>
+      <input type="number" name="" id="val2" />
+      <br><br>
+      <div id="root"></div><br>
+      <button type="button" onclick="add()" class="btn btn-outline-dark">+</button>     
+      <button type="button" onclick="sub()" class="btn btn-outline-dark">-</button>
+      <button type="button" onclick="mul()" class="btn btn-outline-dark">x</button>
+      <button type="button" onclick="div()" class="btn btn-outline-dark">/</button>
+      <button type="button" onclick="per()" class="btn btn-outline-dark">%</button>
+    </center>
+    <script>
+
+
+      function add() {
+        let a = document.getElementById("val1").value;
+        let b = document.getElementById("val2").value;
+        let total = document.getElementById("root");
+        total.innerHTML = parseInt(a) + parseInt(b);
+      }
+
+      function sub() {
+        let a = document.getElementById("val1").value;
+        let b = document.getElementById("val2").value;
+        let total = document.getElementById("root");
+        total.innerHTML = parseInt(a) - parseInt(b);
+      }
+
+      function mul() {
+        let a = document.getElementById("val1").value;
+        let b = document.getElementById("val2").value;
+        let total = document.getElementById("root");
+        total.innerHTML = parseInt(a) * parseInt(b);
+      }
+
+      function div() {
+        let a = document.getElementById("val1").value;
+        let b = document.getElementById("val2").value;
+        let total = document.getElementById("root");
+        total.innerHTML = parseInt(a) / parseInt(b);
+      }
+
+      function per() {
+        let a = document.getElementById("val1").value;
+        let b = document.getElementById("val2").value;
+        let total = document.getElementById("root");
+        total.innerHTML = (parseInt(a) / parseInt(b));
+      }
+      
+    </script>
+  </body>
+</html>

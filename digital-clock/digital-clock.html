@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1 id="root"></h1>
+    </center>
+    <script>
+      let sec = 0;
+      let munit = 0;
+      let hour = 0;
+      let day = 0;
+      setInterval(() => {
+        sec++;
+        let show = document.getElementById("root");
+        show.innerHTML = `
+        day:${day}  
+          hours:${hour} 
+          munit:${munit}
+           
+          sec:${sec}`;
+
+        if (sec == 59) {
+          sec = 0;
+          munit++;
+        }
+
+        if (munit == 59) {
+          munit = 0;
+          hour++;
+        }
+
+        if (hour == 59) {
+          hour = 0;
+          day++;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
